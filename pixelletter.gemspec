@@ -10,5 +10,7 @@ Gem::Specification.new do |s|
   s.homepage    ='http://rubygems.org/gems/pixelletter'
   s.add_runtime_dependency "builder", ["~> 3.1.4"]
   s.add_development_dependency 'rspec'
-  s.add_development_dependency 'rspec-rails'
+  s.add_development_dependency 'rake'
+  s.add_development_dependency 'simplecov'
+  # s.add_development_dependency 'rspec-rails'
 end
