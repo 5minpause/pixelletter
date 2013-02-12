@@ -5,14 +5,14 @@ require 'restclient_with_cert'
 require 'yaml'
 
 module Pixelletter
-  if File.exists?("../CREDENTIALS")
-    f = (File.join(File.dirname(__FILE__), "CREDENTIALS"))
+  if File.exists?(File.join(File.dirname('../'), "CREDENTIALS"))
+    f = File.join(File.dirname('../'), "CREDENTIALS")
     yml = YAML.load(open(f))
     ENV['EMAIL'] = yml['email']
     ENV['PASSWORD'] = yml['password']
   else
-    ENV['EMAIL'] = 'a'
-    ENV['PASSWORD'] = 'b'
+    ENV['EMAIL'] = nil
+    ENV['PASSWORD'] = nil
   end
 end
 
