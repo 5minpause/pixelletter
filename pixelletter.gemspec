@@ -6,7 +6,20 @@ Gem::Specification.new do |s|
   s.description = "A simple gem to use the pixelletter.de API as there exists only an aweful PHP class yet."
   s.authors     = ["Holger Frohloff"]
   s.email       = 'holger@5minutenpause.com'
-  s.files       = ["lib/authenticator.rb"]
+  s.files       = [
+    'CREDENTIALS.example',
+    'Rakefile',
+    'README.md',
+    'VERSION',
+    'lib/pixelletter.rb',
+    'lib/pixelletter/base.rb',
+    'lib/pixelletter/request/request.rb',
+    'lib/pixelletter/request/xml_builder.rb',
+    'spec/spec_helper.rb',
+    'spec/pixelletter_spec.rb',
+    'spec/request/request_spec.rb',
+    'spec/request/xml_builder_spec.rb'
+  ]
   s.homepage    ='http://rubygems.org/gems/pixelletter'
   s.add_dependency "activesupport"
   s.add_dependency "attr_required"
