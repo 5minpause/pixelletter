@@ -1,10 +1,10 @@
 module Pixelletter
   class Authenticator
-    def initialize(email, password, agb, waive_cancelation)
+    def initialize(email, password, agb, widerrufsverzicht)
       @email = email
       @password = password
       @agb = agb
-      @waive_cancelation = waive_cancelation
+      @widerrufsverzicht = waive_cancelation
     end
   end
 end
