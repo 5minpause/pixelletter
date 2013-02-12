@@ -20,7 +20,7 @@ Gem::Specification.new do |s|
     'spec/request/request_spec.rb',
     'spec/request/xml_builder_spec.rb'
   ]
-  s.homepage    ='http://rubygems.org/gems/pixelletter'
+  s.homepage    ='https://github.com/jazzgumpy/pixelletter'
   s.add_dependency "activesupport"
   s.add_dependency "attr_required"
   s.add_dependency "nokogiri"
