@@ -1,23 +1,25 @@
 Pixelletter
 ===========
 
-A simple gem to use the API @ pixelletter.de  
-  
-This gem is not affiliated with http://www.pixelletter.de and not supported by them.  
+A simple gem to use the API @ pixelletter.de
+
+This gem is not affiliated with http://www.pixelletter.de and not supported by them.
 
 Pixelletter is a small SaaS from Germany. You can use it to send letters. Yay!
-They currently only offer a curl and PHP example usage scenario. I hate PHP and I don't use curl from my Ruby code.  
+They currently only offer a curl and PHP example usage scenario. I hate PHP and I don't use curl from my Ruby code.
 That's why I created this small gem.
 
-It is a very rough draft. You cannot use the upload they offer.  
-That means you have to provide all content via an xml file which the gem creates for you. Just hand the   
-content as a hash.  
+It is a very rough draft. You cannot use the upload they offer.
+That means you have to provide all content via an xml file which the gem creates for you. Just hand the
+content as a hash.
 
 Future versions might provide a more OO approach to creating orders.
 
-# Install  
+# Install
 
-`gem install pixelletter`
+```
+gem install pixelletter
+```
 
 # Requirements
 
@@ -27,8 +29,10 @@ Future versions might provide a more OO approach to creating orders.
 # Usage
 
 Initialize a Pixelletter::Request:
-`my_request = Pixelletter::Request.new(email: ENV['EMAIL'], password: ENV['PASSWORD'], agb: true, widerrufsrecht: true))`
-You can pass an optional attribute: `testmodus: true`. This makes sure no actual orders are created and you are not billed.  
+```
+my_request = Pixelletter::Request.new(email: ENV['EMAIL'], password: ENV['PASSWORD'], agb: true, widerrufsrecht: true))
+```
+You can pass an optional attribute: `testmodus: true`. This makes sure no actual orders are created and you are not billed.
 
 
 Create an order hash:
@@ -53,6 +57,6 @@ Start a request with this order:
 
 
 # Meta
-Created by Holger Frohloff  
+Created by Holger Frohloff
 Released under the MIT License: [www.opensource.org/licenses/mit-license.php](www.opensource.org/licenses/mit-license.php)
 
