@@ -25,7 +25,7 @@ Gem::Specification.new do |s|
   s.add_dependency "attr_required"
   s.add_dependency "nokogiri"
   s.add_dependency "restclient_with_cert"
-  s.add_runtime_dependency "builder", ["~> 3.1.4"]
+  s.add_runtime_dependency "builder", ["~> 3.0.4"]
   s.add_development_dependency 'rspec'
   s.add_development_dependency 'test_xml'
   s.add_development_dependency 'rake'
