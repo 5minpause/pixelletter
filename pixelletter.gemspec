@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name        = 'pixelletter'
   s.version     = File.read(File.join(File.dirname(__FILE__), "VERSION"))
-  s.date        = '2013-02-06'
+  s.date        = Time.now.strftime("%Y-%m-%d")
   s.summary     = "A gem to use the pixelletter.de API"
   s.description = "A simple gem to use the pixelletter.de API as there exists only an aweful PHP class yet."
   s.authors     = ["Holger Frohloff"]
