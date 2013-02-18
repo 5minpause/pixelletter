@@ -9,9 +9,9 @@ Pixelletter is a small SaaS from Germany. You can use it to send letters. Yay!
 They currently only offer a curl and PHP example usage scenario. I hate PHP and I don't use curl from my Ruby code.
 That's why I created this small gem.
 
-It is a very rough draft. You cannot use the upload they offer.
+It is still an early version.
 That means you have to provide all content via an xml file which the gem creates for you. Just hand the
-content as a hash.
+content as a hash or attach a file (e.g. a pdf file).
 
 Future versions might provide a more OO approach to creating orders.
 
@@ -25,6 +25,7 @@ gem install pixelletter
 
 * You need an account at [pixelletter.de](http://www.pixelletter.de)
 * Edit the file `CREDENTIALS.example` and enter your credentials.
+* Save it as CREDENTIALS
 
 # Usage
 
@@ -53,10 +54,20 @@ order: { order:
 ```
 
 Start a request with this order:
-`my_request.request(order)`
+```
+my_request.request(order)
+```
+
+If you want to send a pdf file as letter do this:
+```
+pdf_file = File.new(File.join('path', 'to', 'my_letter.pdf'))
+my_request.request(order, pdf_file)
+```
+
 
 
 # Meta
 Created by Holger Frohloff
+
 Released under the MIT License: [www.opensource.org/licenses/mit-license.php](www.opensource.org/licenses/mit-license.php)
 
