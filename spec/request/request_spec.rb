@@ -2,6 +2,23 @@
 require 'spec_helper'
 
 describe Pixelletter::Request do
+  before do
+    Pixelletter.load_initial_values
+    Pixelletter.sandbox!
+    xml =   <<-XML
+    <?xml version="1.0" encoding="UTF-8"?>
+    <pixelletter version="1.1">
+      <response>
+        <result code="100">
+          <msg>Auftrag erfolgreich übermittelt.</msg>
+          <id>11954460</id>
+        </result>
+      </response>
+    </pixelletter>
+    XML
+
+    FakeWeb.register_uri(:post, "http://www.fakeweb.test", :body => xml)
+  end
 
   let :attributes do
     {
@@ -55,21 +72,11 @@ describe Pixelletter::Request do
         }
       end
 
-      # <?xml version="1.0" encoding="UTF-8"?>
-      # <pixelletter version="1.1">
-      #   <response>
-      #     <result code="100">
-      #       <msg>Auftrag erfolgreich übermittelt.</msg>
-      #       <id>11954460</id>
-      #     </result>
-      #   </response>
-      # </pixelletter>
-
       it "should send a successful request" do
-        # order = Pixelletter::TextOrder.new()
-        pr = mock(Pixelletter::Request.new(attributes))
-        pr.stub(:request).with(order).and_return({:value=>"100", :msg=>"Auftrag erfolgreich übermittelt.", :id=>"11954536"})
+        pr = Pixelletter::Request.new(attributes)
+
         response = pr.request(order)
+
         response[:value].should == '100'
       end
     end
@@ -89,10 +96,15 @@ describe Pixelletter::Request do
 
       it "should send a successful request" do
         pr = Pixelletter::Request.new(attributes)
-        # pr.stub(:request).with(order).and_return({:value=>"100", :msg=>"Auftrag erfolgreich übermittelt.", :id=>"11954536"})
-        response = pr.request(order)
-        puts response.inspect
-        # response[:value].should == '100'
+        if File.exists?(File.join('spec', 'files', 'test.pdf'))
+          pdf_file = File.new(File.join('spec', 'files', 'test.pdf'))
+        else
+          pdf_file = nil
+        end
+
+        response = pr.request(order, pdf_file)
+
+        response[:value].should == '100'
       end
     end
   end

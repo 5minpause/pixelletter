@@ -24,6 +24,30 @@ describe Pixelletter::XMLBuilder do
       XML
     end
 
+    context 'with false as value' do
+      let :auth do
+        { auth: { email: 'email@email.de', password: 'password', agb: false, widerrufsverzicht: false, testmodus: true } }
+      end
+
+      it 'should create a valid xml with an <auth> block' do
+        b = Pixelletter::XMLBuilder.new
+        xml = b.create_xml(auth)
+
+        xml.should equal_xml(<<-XML)
+          <?xml version="1.0" encoding="UTF-8"?>
+          <pixelletter version="1.0">
+            <auth>
+              <email>email@email.de</email>
+              <password>password</password>
+              <agb>nein</agb>
+              <widerrufsverzicht>nein</widerrufsverzicht>
+              <testmodus>true</testmodus>
+            </auth>
+          </pixelletter>
+        XML
+      end
+    end
+
     let :order do
       { order:
         {

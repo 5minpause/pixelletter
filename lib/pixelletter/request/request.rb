@@ -2,20 +2,24 @@ module Pixelletter
    class Request < Base
     attr_required :email, :password, :agb, :widerrufsverzicht, :testmodus
 
-    ENDPOINT = 'https://www.pixelletter.de/xml/index.php'
-
     def initialize(attributes = {})
       super
     end
 
-    def request(order)
+    def request(order, file=nil)
       xml = build_xml(order)
       xml_file = File.join(File.dirname('../'), "pixml.xml")
       File.open(xml_file, 'w') { |file| file.write(xml) }
       upload = File.new(File.join(File.dirname('../'), "pixml.xml"), 'rb')
 
-      response = handle_response do
-        RestClient.post('https://www.pixelletter.de/xml/index.php', xml: upload)
+      if file
+        response = handle_response do
+          RestClient.post(endpoint, xml: upload, "uploadfile0" => file)
+        end
+      else
+        response = handle_response do
+          RestClient.post(endpoint, xml: upload)
+        end
       end
 
       File.delete(File.join(File.dirname('../'), "pixml.xml"))
@@ -53,5 +57,8 @@ module Pixelletter
       }
     end
 
+    def endpoint
+      Pixelletter.endpoint
+    end
   end
 end
