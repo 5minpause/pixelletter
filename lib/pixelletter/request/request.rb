@@ -1,5 +1,7 @@
 module Pixelletter
    class Request < Base
+    require 'nokogiri'
+
     attr_required :email, :password, :agb, :widerrufsverzicht, :testmodus
 
     def initialize(attributes = {})
