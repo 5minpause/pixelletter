@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    pixelletter (0.0.2)
+    pixelletter (0.1.1)
       activesupport
       attr_required
       builder (~> 3.0.4)

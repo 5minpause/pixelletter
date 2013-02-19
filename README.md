@@ -1,5 +1,11 @@
 Pixelletter
 ===========
+[![Code
+Climate](https://codeclimate.com/github/jazzgumpy/pixelletter.png)](https://codeclimate.com/github/jazzgumpy/pixelletter)
+[![Dependency
+Status](https://gemnasium.com/jazzgumpy/pixelletter.png)](https://gemnasium.com/jazzgumpy/pixelletter)
+[![Build
+Status](https://travis-ci.org/jazzgumpy/pixelletter.png)](https://travis-ci.org/jazzgumpy/pixelletter)
 
 A simple gem to use the API @ pixelletter.de
 
