@@ -54,7 +54,8 @@ describe Pixelletter::XMLBuilder do
           options: {
             type: 'text',
             action: 1,
-            destination: 'DE'
+            destination: 'DE',
+            addoption: '33'
           },
           text: {
             address: "Erika Mustermann\nMusterstr. 2\nD-81237 Musterstadt",
@@ -84,6 +85,7 @@ describe Pixelletter::XMLBuilder do
       <type>text</type>
       <action>1</action>
       <destination>DE</destination>
+      <addoption>33</addoption>
      </options>
      <text>
       <address>Erika Mustermann
