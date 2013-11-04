@@ -85,3 +85,7 @@ Created by Holger Frohloff
 
 Released under the MIT License: [www.opensource.org/licenses/mit-license.php](www.opensource.org/licenses/mit-license.php)
 
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/5minpause/pixelletter/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
