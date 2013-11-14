@@ -1,11 +1,16 @@
 Pixelletter
 ===========
 [![Code
-Climate](https://codeclimate.com/github/jazzgumpy/pixelletter.png)](https://codeclimate.com/github/jazzgumpy/pixelletter)
+Climate](https://codeclimate.com/github/5minpause/pixelletter.png)](https://codeclimate.com/github/5minpause/pixelletter)
 [![Dependency
-Status](https://gemnasium.com/jazzgumpy/pixelletter.png)](https://gemnasium.com/jazzgumpy/pixelletter)
+Status](https://gemnasium.com/5minpause/pixelletter.png)](https://gemnasium.com/5minpause/pixelletter)
 [![Build
-Status](https://travis-ci.org/jazzgumpy/pixelletter.png)](https://travis-ci.org/jazzgumpy/pixelletter)
+Status](https://travis-ci.org/5minpause/pixelletter.png)](https://travis-ci.org/5minpause/pixelletter)
+
+<!-- Piwik Image Tracker -->
+<img src="https://gumpy.crux.uberspace.de/piwik/piwik.php?idsite=4&amp;rec=1"
+style="border:0" alt="" />
+<!-- End Piwik -->
 
 A simple gem to use the API @ pixelletter.de
 
@@ -84,8 +89,4 @@ my_request.request(order, pdf_file)
 Created by Holger Frohloff
 
 Released under the MIT License: [www.opensource.org/licenses/mit-license.php](www.opensource.org/licenses/mit-license.php)
-
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/5minpause/pixelletter/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
