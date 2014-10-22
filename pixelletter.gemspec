@@ -27,13 +27,13 @@ Gem::Specification.new do |s|
   s.add_dependency "attr_required"
   s.add_dependency "nokogiri"
   s.add_dependency "rest_client"
-  s.add_runtime_dependency "builder", ["~> 3.0.4"]
+  s.add_runtime_dependency "builder", ["~> 3.2"]
   s.add_development_dependency 'rspec'
   s.add_development_dependency 'test_xml'
   s.add_development_dependency 'rake'
   s.add_development_dependency 'simplecov'
   s.add_development_dependency 'guard'
   s.add_development_dependency 'guard-rspec'
-  s.add_development_dependency 'rb-fsevent', ['~> 0.9.1']
+  s.add_development_dependency 'rb-fsevent', ['~> 0.9']
   s.add_development_dependency 'fakeweb'
 end
