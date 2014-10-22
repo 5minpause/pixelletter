@@ -48,7 +48,7 @@ describe Pixelletter::Request do
       it 'should succeed' do
         expect do
           Pixelletter::Request.new(attributes)
-        end.not_to raise_error AttrRequired::AttrMissing
+        end.not_to raise_error
       end
     end
   end
@@ -77,7 +77,7 @@ describe Pixelletter::Request do
 
         response = pr.request(order)
 
-        response[:value].should == '100'
+        expect(response[:value]).to eq '100'
       end
     end
 
@@ -104,7 +104,7 @@ describe Pixelletter::Request do
 
         response = pr.request(order, pdf_file)
 
-        response[:value].should == '100'
+        expect(response[:value]).to eq '100'
       end
     end
   end

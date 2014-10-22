@@ -52,5 +52,3 @@ end
 require 'pixelletter/base'
 require 'pixelletter/request/request'
 require 'pixelletter/request/xml_builder'
-# require 'pixelletter/order/order'
-# require 'pixelletter/order/text_order'

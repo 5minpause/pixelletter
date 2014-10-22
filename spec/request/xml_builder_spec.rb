@@ -3,14 +3,20 @@ require 'spec_helper'
 describe Pixelletter::XMLBuilder do
   describe '#create_xml' do
     let :auth do
-      { auth: { email: 'email@email.de', password: 'password', agb: true, widerrufsverzicht: true, testmodus: true } }
+      { auth: {
+        email: 'email@email.de',
+        password: 'password',
+        agb: true,
+        widerrufsverzicht: true,
+        testmodus: true }
+      }
     end
 
     it 'should create a valid xml with an <auth> block' do
       b = Pixelletter::XMLBuilder.new
       xml = b.create_xml(auth)
 
-      xml.should equal_xml(<<-XML)
+      expect(xml).to equal_xml(<<-XML)
         <?xml version="1.0" encoding="UTF-8"?>
         <pixelletter version="1.0">
           <auth>
@@ -26,14 +32,20 @@ describe Pixelletter::XMLBuilder do
 
     context 'with false as value' do
       let :auth do
-        { auth: { email: 'email@email.de', password: 'password', agb: false, widerrufsverzicht: false, testmodus: true } }
+        { auth: {
+          email: 'email@email.de',
+          password: 'password',
+          agb: false,
+          widerrufsverzicht: false,
+          testmodus: true }
+        }
       end
 
       it 'should create a valid xml with an <auth> block' do
         b = Pixelletter::XMLBuilder.new
         xml = b.create_xml(auth)
 
-        xml.should equal_xml(<<-XML)
+        expect(xml).to equal_xml(<<-XML)
           <?xml version="1.0" encoding="UTF-8"?>
           <pixelletter version="1.0">
             <auth>
@@ -70,7 +82,7 @@ describe Pixelletter::XMLBuilder do
       b = Pixelletter::XMLBuilder.new
       xml = b.create_xml(auth, order)
 
-      xml.should equal_xml(<<-XML)
+      expect(xml).to equal_xml(<<-XML)
 <?xml version="1.0" encoding="UTF-8"?>
 <pixelletter version="1.0">
   <auth>
