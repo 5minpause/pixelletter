@@ -1,6 +1,7 @@
 # encoding: utf-8
 
 Gem::Specification.new do |s|
+  s.required_ruby_version = '>= 1.9.3'
   s.name        = 'pixelletter'
   s.version     = File.read(File.join(File.dirname(__FILE__), "VERSION"))
   s.date        = Time.now.strftime("%Y-%m-%d")
