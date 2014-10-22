@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 Gem::Specification.new do |s|
   s.name        = 'pixelletter'
   s.version     = File.read(File.join(File.dirname(__FILE__), "VERSION"))
@@ -24,7 +26,7 @@ Gem::Specification.new do |s|
   s.add_dependency "activesupport"
   s.add_dependency "attr_required"
   s.add_dependency "nokogiri"
-  s.add_dependency "restclient_with_cert"
+  s.add_dependency "rest_client"
   s.add_runtime_dependency "builder", ["~> 3.0.4"]
   s.add_development_dependency 'rspec'
   s.add_development_dependency 'test_xml'

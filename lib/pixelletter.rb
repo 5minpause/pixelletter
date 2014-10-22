@@ -1,7 +1,9 @@
+# encoding: utf-8
+
 require 'active_support/core_ext'
 require 'attr_required'
 require 'attr_optional'
-require 'restclient_with_cert'
+require 'rest_client'
 require 'yaml'
 
 module Pixelletter
