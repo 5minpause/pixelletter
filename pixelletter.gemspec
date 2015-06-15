@@ -24,10 +24,10 @@ Gem::Specification.new do |s|
     'spec/request/xml_builder_spec.rb'
   ]
   s.homepage    ='https://github.com/jazzgumpy/pixelletter'
-  s.add_dependency "activesupport"
+  # s.add_dependency "activesupport"
   s.add_dependency "attr_required"
   s.add_dependency "nokogiri"
-  s.add_dependency "rest_client"
+  s.add_dependency "rest-client"
   s.add_runtime_dependency "builder", ["~> 3.2"]
   s.add_development_dependency 'rspec'
   s.add_development_dependency 'test_xml'

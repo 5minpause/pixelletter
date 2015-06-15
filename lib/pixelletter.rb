@@ -1,6 +1,5 @@
 # encoding: utf-8
 
-require 'active_support/core_ext'
 require 'attr_required'
 require 'attr_optional'
 require 'rest_client'

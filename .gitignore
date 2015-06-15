@@ -20,3 +20,5 @@ doc/
 .DS_Store
 CREDENTIALS
 Gemfile.lock
+
+.idea/
